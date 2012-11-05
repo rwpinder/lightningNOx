@@ -1,0 +1,29 @@
+These are scripts for generating lightning NOx input files for CMAQv5.0.
+
+
+If you have the NLDN dataset and need to build monthly average strike density
+
+1. Build the program base/src/NLDN_2D using Makefile.NLDN_2D. This
+does not require the most up to date version of IOAPI.
+
+2. Run base/run.NLDN_2D.sh
+
+3. Copy the output to base/flash_data/monthly_flash_density
+
+
+If you have the NLDN gridded monthly average strike density and need
+to build the parameter file for CMAQv5.0 (ocean mask, ICCG, and NLDN
+adjustment factors):
+
+1. Build the program base/src/LTNG_2D_DATA. This requires IOAPI 3.1.
+
+2. Run base/run.LTNG_2D.sh
+
+3. Compare files in R-out and output against the results in the verify
+   directory
+
+
+
+
+
+
